@@ -9,8 +9,8 @@ def partition(array, lo, hi):
 
         if array[jay]<=piv:
 
-            i = i + 1
-            array[i], array[j]= array[j], array[i]
+            i+=1
+            array[i], array[jay]= array[jay], array[i]
 
     array[i+1], array[hi] = array[hi], array [i+1]
 
@@ -28,3 +28,4 @@ def quickSort(array, lo, hi):
 
         quickSort(array, lo, py-1)
         quickSort(array, py+1, hi)
+
