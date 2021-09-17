@@ -1,6 +1,6 @@
 
 import numpy
-
+"""Where the magic in quick sort really happens  """
 def partition(array, lo, hi):
     i = (lo - 1)
     piv = array[hi]
