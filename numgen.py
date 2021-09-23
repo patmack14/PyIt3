@@ -43,19 +43,3 @@ if __name__ == "__main__" :
     write_array( the_filename, the_data)
     print( the_quantity, "values written to", the_filename)
 
-"""=
-randoArray = []
-
-#assigning file name to what the user entered 
-file=sys.argv[1]
-
-with open(file,'r', encoding='utf-8')as theFile:
-    randoArray=theFile.read().splitlines()
-   
-   #casting the read in string to an int 
-   randoArray=[int(i) for i in theFile]
-    
-print("array before the sort",randoArray)
-quickSort(randoArray, 0, len(randoArray)-1)
-print("array after the sort",randoArray)
-"""

@@ -14,8 +14,8 @@ def runMain():
        
        
     
-    quickSort(randoArray, 0, len(randoArray)-1)
-    print("Your sorted array: ",randoArray)
+    num_comps,num_assign = quickSort(randoArray, 0, len(randoArray)-1)
+    print("The Number of Assignments that occured in quicksort was: "+str(num_assign)+", The number of comparisons that occured in Quicksort was:  "+str(num_comps))
     
     
     """
@@ -31,6 +31,7 @@ def runMain():
     
     #displays how many values were sorted to the user.
     print("I just sorted "+str(len(randoArray))+" numbers for you.")
+
 runMain()
 
     
