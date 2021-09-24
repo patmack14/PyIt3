@@ -80,11 +80,11 @@ def quickSort(array, lo, hi):
 
         num_assign+=temp_num_assign
 
-        print(num_comps,num_assign,"for qs(",lo,",",hi,")")
+        #print(num_comps,num_assign,"for qs(",lo,",",hi,")")
 
 
     return num_comps, num_assign
-
+"""
 if __name__ == "__main__" :
 
     test_values = [ 5, 4, 17, -3, 12, 99, 1]
@@ -98,4 +98,4 @@ if __name__ == "__main__" :
     print( "Total comps were", c)
 
     print( "Total assigns were", a)
-    
+"""    
