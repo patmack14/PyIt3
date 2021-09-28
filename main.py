@@ -28,7 +28,7 @@ def runMain():
     While loop makes a copy of the original list and runs Quicksort 3x for each list size(1/4,1/2, and full lengths) recording the results in the 'results' list
     then prints the results
 
-    NOTE: The printout and recording systems for recording the reuslts needs some tweaking most likely for aesthetics and efficency.
+    NOTE: The printout and recording systems for recording the results needs some tweaking most likely for aesthetics and efficency.
 
 
     
