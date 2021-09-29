@@ -1,6 +1,8 @@
 
 import numpy
-"""Where the magic in quick sort really happens 
+
+def partition(array, lo, hi):
+    """Where the magic in quick sort really happens 
 Args:
     array: The array to be sorted 
     lo: the current starting index 
@@ -11,7 +13,6 @@ Args:
         Assignment counter(num_assign)back to quicksort 
         Comparison Counter(num_comps) back to quicksort 
 """
-def partition(array, lo, hi):
     num_comps = 0
     num_assign=0
     i = (lo - 1)
@@ -39,7 +40,9 @@ def partition(array, lo, hi):
     return (i+1),num_comps,num_assign
 
 
-"""
+
+def quickSort(array, lo, hi):
+    """
 Args:
     array: The array to be sorted 
     lo:the lowest starting index of the list (list[0])
@@ -49,7 +52,6 @@ Returns:
     num_comps: The totalled statistic for the number of comparisons back to main.py 
     num_assign: The totalled statistic for he number of assignment statements back to main.py
 """
-def quickSort(array, lo, hi):
     num_comps=0
     num_assign=0
     num_comps+=1

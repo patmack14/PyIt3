@@ -1,6 +1,9 @@
 import numpy
 import random
-"""Where the magic in quick sort really happens 
+
+
+def partition(array, lo, hi):
+    """Where the magic in quick sort really happens"-Professor Steinmetz 
 Args:
     array: The array to be sorted 
     lo: the current starting index 
@@ -11,8 +14,6 @@ Args:
         Assignment counter(num_assign)back to quicksort 
         Comparison Counter(num_comps) back to quicksort 
 """
-
-def partition(array, lo, hi):
     num_comps = 0
     num_assign=0
     piv_index=random.randint(lo,hi)
@@ -43,7 +44,9 @@ def partition(array, lo, hi):
     return (i+1),num_comps,num_assign
 
 
-"""
+
+def rand_quick_sort(array, lo, hi):
+    """
 Args:
     array: The array to be sorted 
     lo:the lowest starting index of the list (list[0])
@@ -53,7 +56,6 @@ Returns:
     num_comps: The totalled statistic for the number of comparisons back to main.py 
     num_assign: The totalled statistic for he number of assignment statements back to main.py
 """
-def rand_quickSort(array, lo, hi):
     num_comps=0
     num_assign=0
     num_comps+=1
@@ -71,14 +73,14 @@ def rand_quickSort(array, lo, hi):
 
 
 
-        temp_num_comps,temp_num_comps=rand_quickSort(array, lo, py-1)
+        temp_num_comps,temp_num_comps=rand_quick_sort(array, lo, py-1)
 
         num_comps+=temp_num_comps
 
         num_assign+=temp_num_assign
 
         
-        temp_num_comps,temp_num_assign=rand_quickSort(array, py+1, hi)
+        temp_num_comps,temp_num_assign=rand_quick_sort(array, py+1, hi)
 
         num_comps+=temp_num_comps
 
