@@ -1,6 +1,12 @@
 import numpy
 import random
 
+def rand_part(array,lo,hi):
+    rand_piv=random.randint(lo,hi)
+    array[rand_piv], array[hi]= array[hi], array[rand_piv]
+    return partition(array,lo,hi)
+    
+
 
 def partition(array, lo, hi):
     """Where the magic in quick sort really happens"-Professor Steinmetz 
@@ -16,13 +22,9 @@ Args:
 """
     num_comps = 0
     num_assign=0
-    piv_index=random.randint(lo,hi)
-    print("the pivot index is: "+str(piv_index))
     i = (lo - 1)
-    piv = array[piv_index]
-    print("the pivot index is: "+str(piv_index))
-    array[piv_index], array[hi]= array[hi], array[piv_index]
-    num_assign+=5
+    piv=array[hi]
+    num_assign+=7 #this adds in assignments from
     
     for jay in range(lo, hi):
         
@@ -65,7 +67,7 @@ Returns:
         
         num_comps+=1
 
-        py,temp_num_comps,temp_num_assign = partition(array, lo, hi)
+        py,temp_num_comps,temp_num_assign = rand_part(array, lo, hi)
 
         num_comps+=temp_num_comps
 
@@ -88,21 +90,23 @@ Returns:
 
         #print(num_comps,num_assign,"for qs(",lo,",",hi,")")
 
-
+        
     return num_comps, num_assign
 
-"""
+
+
+
+
 if __name__ == "__main__" :
 
     test_values = [ 5, 4, 17, -3, 12, 99, 1]
 
     print( "pre", test_values)
 
-    c, a = quickSort( test_values, 0, len(test_values)-1)
+    c, a = rand_quick_sort( test_values, 0, len(test_values)-1)
 
     print( "post", test_values)
 
     print( "Total comps were", c)
 
     print( "Total assigns were", a)
-    """
