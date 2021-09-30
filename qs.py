@@ -23,7 +23,7 @@ Args:
     for jay in range(lo, hi):
         
         num_comps+=1
-        
+        print(num_comps)
         if array[jay]<=piv:
             
             
@@ -36,6 +36,7 @@ Args:
 
     array[i+1], array[hi] = array[hi], array [i+1]
     num_assign+=2
+    #print( "Partition for  low =", lo, "high =", hi, "comps =", num_comps)
     
     return (i+1),num_comps,num_assign
 
@@ -59,17 +60,18 @@ Returns:
     temp_num_assign =0
     if lo < hi:
         
-        num_comps+=1
+        
 
         py,temp_num_comps,temp_num_assign = partition(array, lo, hi)
+        
 
         num_comps+=temp_num_comps
-
+        
         num_assign+=temp_num_assign
 
 
 
-        temp_num_comps,temp_num_comps=quickSort(array, lo, py-1)
+        num_comps,temp_num_comps=quickSort(array, lo, py-1)
 
         num_comps+=temp_num_comps
 
@@ -86,6 +88,23 @@ Returns:
 
 
     return num_comps, num_assign
+
+if __name__ == "__main__" :
+    test_values=[]
+    
+    i=0
+   
+    while(i<250):
+        #test_values.append(random.randint(0,100000))
+        test_values.append(i)
+        
+        i+=1
+    
+    j,k=quickSort(test_values,0,len(test_values)-1)
+    print(j, " ",k)
+   
+
+
 """
 if __name__ == "__main__" :
 

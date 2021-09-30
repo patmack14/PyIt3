@@ -1,3 +1,4 @@
+from qs import quickSort
 import numpy
 import random
 
@@ -65,7 +66,7 @@ Returns:
     temp_num_assign =0
     if lo < hi:
         
-        num_comps+=1
+        
 
         py,temp_num_comps,temp_num_assign = rand_part(array, lo, hi)
 
@@ -90,6 +91,7 @@ Returns:
 
         #print(num_comps,num_assign,"for qs(",lo,",",hi,")")
 
+          
         
     return num_comps, num_assign
 
@@ -98,7 +100,20 @@ Returns:
 
 
 if __name__ == "__main__" :
-
+    test_values=[]
+    
+    i=0
+   
+    while(i<500):
+        #test_values.append(random.randint(0,100000))
+        test_values.append(i)
+        
+        i+=1
+    
+    j,k=quickSort(test_values,0,len(test_values)-1)
+    print(j, " ", k)
+    
+    """
     test_values = [ 5, 4, 17, -3, 12, 99, 1]
 
     print( "pre", test_values)
@@ -110,3 +125,4 @@ if __name__ == "__main__" :
     print( "Total comps were", c)
 
     print( "Total assigns were", a)
+"""
