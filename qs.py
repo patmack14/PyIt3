@@ -23,7 +23,7 @@ Args:
     for jay in range(lo, hi):
         
         num_comps+=1
-        print(num_comps)
+        
         if array[jay]<=piv:
             
             
@@ -88,7 +88,7 @@ Returns:
 
 
     return num_comps, num_assign
-
+"""
 if __name__ == "__main__" :
     test_values=[]
     
@@ -105,7 +105,7 @@ if __name__ == "__main__" :
    
 
 
-"""
+
 if __name__ == "__main__" :
 
     test_values = [ 5, 4, 17, -3, 12, 99, 1]

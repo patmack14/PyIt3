@@ -43,8 +43,8 @@ def runMain():
         results = []
         f=[]
         while(i <= 17):
-            print("inside while")
-            if i <= 2:
+            
+            if i <= 5:
                f=copy.deepcopy(rando_Array)
                comps, assigns = quickSort(f, 0, quarter)
                results.append("run: "+str(i+1) +" had:"+str(comps)+" comparisons and"+str(assigns) +" variable asssignments after sorting 25 percent of the elements \n")
@@ -60,16 +60,18 @@ def runMain():
                     f=copy.deepcopy(rando_Array)
                     comps,assigns=quickSort(f,0,half)
                     results.append("run: "+str(i+1) +" had: "+str(comps)+"comparisons and "+str(assigns) +"variable asssignments after sorting 50 percent of the elements \n")
-                else:
+                    
+                if i>8 & i<=11:
                     f=copy.deepcopy(rando_Array)
                     comps,assigns=rand_quick_sort(f,0,half)
                     results.append("RANDOM quick sort run #: "+str(i+1) +" had:"+str(comps)+" comparisons and"+str(assigns) +" variable asssignments after sorting 25 percent of the elements \n")
             else:
-                if i>11 & i<14:
+                if i>11 & i<=14:
                     f=copy.deepcopy(rando_Array)
                     comps,assigns=quickSort(f,0,len(rando_Array)-1)
                     results.append("run: "+str(i+1) +" had: "+str(comps)+" comparisons and "+str(assigns) +" variable asssignments after sorting all percent of the elements \n")
-                else:
+                    
+                if i>14 & i <=17:
                     results.append("RANDOM quick sort run #: "+str(i+1) +" had:"+str(comps)+" comparisons and"+str(assigns) +" variable asssignments after sorting 25 percent of the elements \n")    
             i+=1  
         print("HELLO",results)
@@ -81,7 +83,7 @@ def runMain():
     This opens a new file and appends '-sorted' to the file's name per spec
     then writes the sorted array to a new txt file.
     """
-    
+    n,m=rand_quick_sort(rando_Array,0,len(rando_Array)-1)
     output_file = open (file_name + "-sorted", 'w')
     for i in rando_Array :
         line = str(i) + "\n"
@@ -90,8 +92,8 @@ def runMain():
     
     # displays how many values were sorted to the user.
     print("I just sorted "+str(len(rando_Array))+" numbers for you.")
-    
-print("im about to run main")
-runMain()
+
+if __name__ == "__main__" :    
+    runMain()
 
     

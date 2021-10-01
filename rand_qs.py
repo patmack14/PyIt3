@@ -98,7 +98,7 @@ Returns:
 
 
 
-
+"""
 if __name__ == "__main__" :
     test_values=[]
     
@@ -113,7 +113,8 @@ if __name__ == "__main__" :
     j,k=quickSort(test_values,0,len(test_values)-1)
     print(j, " ", k)
     
-    """
+    
+    
     test_values = [ 5, 4, 17, -3, 12, 99, 1]
 
     print( "pre", test_values)
